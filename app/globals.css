@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@source "../components/**/*.{js,ts,jsx,tsx,mdx}";
+@source "./**/*.{js,ts,jsx,tsx,mdx}";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-pantri-primary: #000666;
+  --color-pantri-accent: #1b6d24;
+  --color-pantri-cream: #faf8f5;
+  --color-pantri-charcoal: #1a1a1a;
+  --color-pantri-muted: #6b7280;
+  --color-pantri-border: #e8e4df;
+  --color-pantri-background: #faf8f5;
+  --color-pantri-foreground: #1a1a1a;
+  --color-pantri-surface: #ffffff;
+  --color-pantri-surface-muted: #f4f4f5;
+  --color-pantri-input: #ffffff;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer theme {
+  .dark {
+    --color-pantri-cream: #0f0f12;
+    --color-pantri-charcoal: #f5f5f4;
+    --color-pantri-muted: #a1a1aa;
+    --color-pantri-border: #2e2e35;
+    --color-pantri-background: #0f0f12;
+    --color-pantri-foreground: #f5f5f4;
+    --color-pantri-surface: #1a1a1f;
+    --color-pantri-surface-muted: #242429;
+    --color-pantri-input: #242429;
+    --color-pantri-primary: #4d4d99;
+    --color-pantri-accent: #2d9a3a;
+  }
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background-color: var(--color-pantri-background);
+    color: var(--color-pantri-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+}
+
+@layer components {
+  .pantri-input {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-pantri-border);
+    background-color: var(--color-pantri-input);
+    color: var(--color-pantri-foreground);
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    outline: none;
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+
+  .pantri-input:focus {
+    border-color: var(--color-pantri-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-pantri-accent) 20%, transparent);
+  }
+
+  .pantri-card {
+    border-radius: 1rem;
+    border: 1px solid var(--color-pantri-border);
+    background-color: var(--color-pantri-surface);
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out forwards;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
