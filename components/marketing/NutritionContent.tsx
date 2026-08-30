@@ -27,7 +27,7 @@ const GOALS = [
   {
     icon: "🍬",
     title: "Low sugar",
-    description: "Lower-sugar swaps and meal patterns — not medical prescriptions.",
+    description: "Lower-sugar swaps and meal patterns  not medical prescriptions.",
   },
   {
     icon: "🧂",
@@ -42,7 +42,7 @@ const GOALS = [
   {
     icon: "🏃",
     title: "Fitness",
-    description: "Fuel for movement — shopping lists that match your week.",
+    description: "Fuel for movement  shopping lists that match your week.",
   },
 ];
 
@@ -55,7 +55,7 @@ const STEPS = [
   {
     step: "02",
     title: "Get personalized meal suggestions",
-    description: "See meal ideas tailored to your goals — general guidance, not a diagnosis.",
+    description: "See meal ideas tailored to your goals  general guidance, not a diagnosis.",
   },
   {
     step: "03",
@@ -78,7 +78,7 @@ export function NutritionContent() {
                 Food that fits your life.
               </h1>
               <p className="mt-6 text-lg text-pantri-muted">
-                Pantri helps you understand what to eat, not just buy food — then shop the
+                Pantri helps you understand what to eat, not just buy food  then shop the
                 ingredients with payroll-friendly plans.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -104,7 +104,7 @@ export function NutritionContent() {
           <SectionHeading
             eyebrow="Goals"
             title="Choose a direction"
-            description="Pick a focus that matches how you want to eat — then explore recipes and the app."
+            description="Pick a focus that matches how you want to eat  then explore recipes and the app."
           />
         </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -176,7 +176,7 @@ export function NutritionContent() {
               light
               align="left"
               title="Explore nutrition in the app"
-              description="Questionnaires, meal suggestions, and shopping lists — all in one place for eligible employees."
+              description="Questionnaires, meal suggestions, and shopping lists  all in one place for eligible employees."
             />
             <div className="mt-2 flex flex-wrap gap-4">
               <CTAButton href="/download" variant="secondary">

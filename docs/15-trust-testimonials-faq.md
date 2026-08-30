@@ -1,4 +1,4 @@
-# Spec 15 — Trust, Testimonials & FAQ
+# Spec 15  Trust, Testimonials & FAQ
 
 ## Route & files
 

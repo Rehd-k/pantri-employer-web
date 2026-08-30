@@ -35,7 +35,7 @@ export function DownloadContent() {
               </h1>
               <p className="mt-6 text-lg text-pantri-muted">
                 Browse on the web, then order, track delivery, and manage payment plans in the Pantri
-                app — for employees of participating employers.
+                app  for employees of participating employers.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <StoreButton
@@ -74,7 +74,7 @@ export function DownloadContent() {
                       <div className="rounded-xl bg-pantri-accent/15 p-4">
                         <p className="text-xs text-pantri-muted">Active plan</p>
                         <p className="mt-1 text-sm font-semibold text-pantri-foreground">
-                          Family package · 20% + 6 mo
+                          Family package · 6 mo plan
                         </p>
                       </div>
                       <div className="grid grid-cols-2 gap-2">
@@ -102,7 +102,7 @@ export function DownloadContent() {
           <SectionHeading
             eyebrow="Features"
             title="What you can do in the app"
-            description="Shopping, plans, nutrition, and tracking — pantry tools are on the roadmap."
+            description="Shopping, plans, nutrition, and tracking  pantry tools are on the roadmap."
           />
         </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

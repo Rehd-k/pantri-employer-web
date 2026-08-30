@@ -8,7 +8,7 @@ import { RECIPES } from "@/lib/recipes";
 export function RecipesContent() {
   return (
     <>
-      <section className="bg-gradient-to-b from-pantri-surface to-pantri-background pt-12 pb-12 sm:pt-16">
+      <section className="bg-linear-to-b from-pantri-surface to-pantri-background pt-12 pb-12 sm:pt-16">
         <Container>
           <ScrollReveal>
             <div className="mx-auto max-w-3xl text-center">
@@ -51,12 +51,12 @@ export function RecipesContent() {
         </Container>
       </section>
 
-      <Section className="!pt-0">
+      <Section className="pt-0!">
         <ScrollReveal>
           <SectionHeading
             eyebrow="Cookbooks"
             title="Popular Nigerian plates"
-            description="Approximate times and calories — not medical advice."
+            description="Approximate times and calories  not medical advice."
           />
         </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -67,7 +67,7 @@ export function RecipesContent() {
                 className="pantri-card group flex h-full flex-col overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg"
               >
                 <div
-                  className={`flex aspect-[4/3] items-end bg-gradient-to-br ${recipe.gradient} p-4`}
+                  className={`flex aspect-4/3 items-end bg-linear-to-br ${recipe.gradient} p-4`}
                 >
                   <span className="rounded-full bg-pantri-surface/90 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-pantri-accent">
                     {recipe.tag}

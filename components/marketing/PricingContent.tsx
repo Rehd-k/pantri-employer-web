@@ -9,10 +9,11 @@ import { FAQ_PRICING } from "@/lib/faq";
 import {
   PAYMENT_PLANS,
   calculatePayment,
+  DEFAULT_SALARY_NAIRA,
   nairaToKobo,
 } from "@/lib/marketing";
 
-const EXAMPLE_KOBO = nairaToKobo(300_000);
+const EXAMPLE_SALARY_KOBO = nairaToKobo(DEFAULT_SALARY_NAIRA);
 
 export function PricingContent() {
   return (
@@ -28,8 +29,9 @@ export function PricingContent() {
                 Simple payment plans
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-pantri-muted">
-                Spread the cost of food over 5 or 6 months through payroll. No APR framing — this is
-                a food purchasing plan with your employer, not a personal loan product.
+                Spread the cost of food over 5 or 6 months through payroll  no cash upfront.
+                Your food package limit is typically 1.5× your monthly salary. Not a personal loan
+                product.
               </p>
             </div>
           </ScrollReveal>
@@ -41,27 +43,25 @@ export function PricingContent() {
           <SectionHeading
             eyebrow="Plans"
             title="Choose how you pay"
-            description={`Examples below use a ${formatNaira(EXAMPLE_KOBO)} food package.`}
+            description={`Examples below use a ${formatNaira(EXAMPLE_SALARY_KOBO)} salary (FGV ${formatNaira(calculatePayment(EXAMPLE_SALARY_KOBO, PAYMENT_PLANS[0]).creditLimitKobo)}).`}
           />
         </ScrollReveal>
         <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
           {PAYMENT_PLANS.map((plan) => {
-            const result = calculatePayment(EXAMPLE_KOBO, plan);
+            const result = calculatePayment(EXAMPLE_SALARY_KOBO, plan);
             return (
               <ScrollReveal key={plan.id}>
                 <div className="pantri-card flex h-full flex-col p-6 sm:p-8">
                   <h3 className="text-xl font-bold text-pantri-foreground">{plan.label}</h3>
                   <dl className="mt-6 space-y-3 text-sm">
                     <div className="flex justify-between gap-4">
-                      <dt className="text-pantri-muted">Initial payment</dt>
-                      <dd className="font-semibold text-pantri-foreground">
-                        {plan.initialPercent}% upfront
-                      </dd>
+                      <dt className="text-pantri-muted">Upfront</dt>
+                      <dd className="font-semibold text-pantri-foreground">₦0</dd>
                     </div>
                     <div className="flex justify-between gap-4">
                       <dt className="text-pantri-muted">Duration</dt>
                       <dd className="font-semibold text-pantri-foreground">
-                        {plan.months} monthly deductions
+                        {plan.months} equal monthly deductions
                       </dd>
                     </div>
                   </dl>
@@ -71,13 +71,10 @@ export function PricingContent() {
                     </p>
                     <p className="mt-2 text-sm text-pantri-foreground">
                       <span className="font-bold text-pantri-accent">
-                        {formatNaira(result.initialKobo)}
-                      </span>{" "}
-                      upfront ·{" "}
-                      <span className="font-bold text-pantri-accent">
                         {formatNaira(result.monthlyKobo)}
                       </span>
-                      /mo × {result.months}
+                      /mo × {result.months} on a{" "}
+                      {formatNaira(result.creditLimitKobo)} limit
                     </p>
                   </div>
                 </div>
@@ -92,7 +89,7 @@ export function PricingContent() {
           <SectionHeading
             eyebrow="Calculator"
             title="Try your numbers"
-            description="Adjust salary context and package value to see a sample plan breakdown."
+            description="Enter your salary to see your 1.5× food package limit and monthly deductions."
           />
         </ScrollReveal>
         <div className="mx-auto max-w-2xl">
@@ -106,7 +103,9 @@ export function PricingContent() {
             <h2 className="text-lg font-bold text-pantri-foreground">Eligibility & terms</h2>
             <p className="mt-3 text-sm leading-relaxed text-pantri-muted">
               Actual eligibility, limits, availability and terms depend on your employer and payroll
-              arrangement. Pantri is a food purchasing platform — not a personal loan product.
+              arrangement. You generally cannot buy above your 1.5× salary limit; as deductions reduce
+              what you owe, available credit returns so you can shop again up to that limit. Pantri is
+              a food purchasing platform  not a personal loan product.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <CTAButton href="/for-employees" variant="outline">

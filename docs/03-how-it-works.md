@@ -1,4 +1,4 @@
-# Spec 03 — How Pantri Works
+# Spec 03  How Pantri Works
 
 ## Route & files
 
@@ -9,24 +9,24 @@
 
 Explain Pantri's payroll-backed food purchasing flow in depth. Primary message:
 
-> **Get the food you need today. Pay from your salary.**
+> **A full table today. Room in your paycheck for tomorrow.**
 
 ## Sections
 
 ### 1. Page hero
 
 - Headline: **How Pantri Works**
-- Subtext: Pantri is a food purchasing platform with payroll-backed payment plans — not a personal loan.
+- Subtext: Pantri is a food purchasing platform with payroll-backed payment plansnot a personal loan. Stock up in bulk and dodge the next price jump (in Nigeria, it's always up)enough for food, bills, and investments.
 - CTA: Start Shopping → `/shop`
 
 ### 2. Four-step flow (expanded)
 
 Reuse pattern from homepage but with larger visuals and more copy per step:
 
-1. **Choose your food** — groceries, packages, events
-2. **Choose your payment plan** — 20%+6 or 25%+5
-3. **Get your food** — fulfilment after initial payment/approval
-4. **Pay through payroll** — automatic deductions
+1. **Choose your food**  groceries, packages, events
+2. **Choose your payment plan**  20%+6 or 25%+5
+3. **Get your food**  fulfilment after initial payment/approval
+4. **Pay through payroll**  automatic deductions
 
 Include a vertical timeline on mobile, horizontal on desktop.
 

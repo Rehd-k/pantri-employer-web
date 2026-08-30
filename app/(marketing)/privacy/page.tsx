@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CTAButton, Section } from "@/components/marketing/primitives";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Pantri",
+  title: "Privacy Policy  Pantri",
   description: "Placeholder privacy policy for Pantri. Full legal text will be published here.",
 };
 
@@ -16,8 +16,8 @@ export default function PrivacyPage() {
           Privacy Policy
         </h1>
         <p className="mt-6 text-base leading-relaxed text-pantri-muted">
-          This page is a placeholder. Pantri&apos;s full privacy policy — covering how we collect,
-          use, and protect account, order, and employer-related information — will be published here
+          This page is a placeholder. Pantri&apos;s full privacy policy  covering how we collect,
+          use, and protect account, order, and employer-related information  will be published here
           before public launch.
         </p>
         <p className="mt-4 text-base leading-relaxed text-pantri-muted">

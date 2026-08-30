@@ -1,4 +1,4 @@
-# Spec 18 — Auth / Login Hub
+# Spec 18  Auth / Login Hub
 
 ## Route & files
 
@@ -31,13 +31,13 @@ Split `/login` into role selector tabs or cards:
 - Message: Platform admin portal
 - CTA: **Go to Admin Portal** → external link `http://localhost:3002/login` (use env `NEXT_PUBLIC_ADMIN_URL`)
 
-Keep existing `useAuth` — employer login unchanged.
+Keep existing `useAuth`  employer login unchanged.
 
 ## Employee signup page (`/signup`)
 
 Informational onboarding steps (not functional web signup):
 
-- Phone, email, employer, employee ID, verification — explain each step
+- Phone, email, employer, employee ID, verification  explain each step
 - CTA: Download app
 - Link: Ask employer to join → `/contact`
 

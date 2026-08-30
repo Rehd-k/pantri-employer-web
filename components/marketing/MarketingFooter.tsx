@@ -69,7 +69,7 @@ export function MarketingFooter() {
               Better food. Smarter living.
             </p>
             <p className="mt-4 text-sm text-white/50">
-              Get the food you need today. Pay from your salary.
+              A full table today. Room in your paycheck for tomorrow.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CTAButton, Section } from "@/components/marketing/primitives";
 
 export const metadata: Metadata = {
-  title: "Terms of Use — Pantri",
+  title: "Terms of Use  Pantri",
   description: "Placeholder terms of use for Pantri. Full legal text will be published here.",
 };
 
@@ -16,8 +16,8 @@ export default function TermsPage() {
           Terms of Use
         </h1>
         <p className="mt-6 text-base leading-relaxed text-pantri-muted">
-          This page is a placeholder. Pantri&apos;s full terms of use — covering website use, the
-          employer portal, and food purchasing with payroll-backed payment plans — will be published
+          This page is a placeholder. Pantri&apos;s full terms of use  covering website use, the
+          employer portal, and food purchasing with payroll-backed payment plans  will be published
           here before public launch.
         </p>
         <p className="mt-4 text-base leading-relaxed text-pantri-muted">

@@ -23,7 +23,7 @@ const FEATURES = [
   },
   {
     title: "Live tracking",
-    description: "Follow progress from warehouse to door — primarily in the Pantri app.",
+    description: "Follow progress from warehouse to door  primarily in the Pantri app.",
   },
   {
     title: "Delivery address management",
@@ -53,7 +53,7 @@ export function DeliveryContent() {
                 From our warehouse to your door.
               </h1>
               <p className="mt-6 text-lg text-pantri-muted">
-                Order on Pantri, then track fulfilment in the mobile app — from confirmation through
+                Order on Pantri, then track fulfilment in the mobile app  from confirmation through
                 delivery.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -148,7 +148,7 @@ export function DeliveryContent() {
           <SectionHeading
             eyebrow="Fresh & frozen"
             title="Care for perishables"
-            description="Fresh and frozen items follow tighter windows — inventory is not unlimited."
+            description="Fresh and frozen items follow tighter windows  inventory is not unlimited."
           />
         </ScrollReveal>
         <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-3">
@@ -163,7 +163,7 @@ export function DeliveryContent() {
             },
             {
               title: "Availability",
-              copy: "Stock depends on catalogue and location — we do not promise unlimited fresh inventory.",
+              copy: "Stock depends on catalogue and location  we do not promise unlimited fresh inventory.",
             },
           ].map((card) => (
             <ScrollReveal key={card.title}>

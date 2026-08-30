@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { formatNaira } from "@/lib/format";
-import type { PublicPackageListItem } from "@/lib/marketing";
+import {
+  calculatePayment,
+  DEFAULT_SALARY_NAIRA,
+  nairaToKobo,
+  PAYMENT_PLANS,
+  type PublicPackageListItem,
+} from "@/lib/marketing";
 
 export function CategoryCard({
   title,
@@ -46,7 +52,12 @@ export function PackageCard({
   href: string;
   popular?: boolean;
 }) {
-  const example = calculateExample(totalKobo);
+  const example = calculatePayment(
+    nairaToKobo(DEFAULT_SALARY_NAIRA),
+    PAYMENT_PLANS[0],
+    totalKobo,
+  );
+  const monthly = Math.round(totalKobo / 6);
 
   return (
     <Link
@@ -65,18 +76,13 @@ export function PackageCard({
           From <span className="font-bold text-pantri-foreground">{formatNaira(totalKobo)}</span>
         </p>
         <p className="text-xs text-pantri-muted">
-          e.g. {formatNaira(example.initial)} upfront · {formatNaira(example.monthly)}/mo × 6
+          e.g. {formatNaira(monthly)}/mo × 6 · within your 1.5× salary limit
+          {example.overLimit ? " (check calculator)" : ""}
         </p>
       </div>
       <span className="mt-4 text-sm font-semibold text-pantri-accent">View package →</span>
     </Link>
   );
-}
-
-function calculateExample(totalKobo: number) {
-  const initial = Math.round(totalKobo * 0.2);
-  const monthly = Math.round((totalKobo - initial) / 6);
-  return { initial, monthly };
 }
 
 export function FeatureCard({
@@ -114,7 +120,7 @@ export function TestimonialCard({
         </p>
       ) : null}
       <p className="text-sm leading-relaxed text-pantri-foreground">&ldquo;{quote}&rdquo;</p>
-      <footer className="mt-4 text-sm font-semibold text-pantri-muted">— {role}</footer>
+      <footer className="mt-4 text-sm font-semibold text-pantri-muted"> {role}</footer>
     </blockquote>
   );
 }

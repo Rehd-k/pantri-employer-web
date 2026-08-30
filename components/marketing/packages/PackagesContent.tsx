@@ -46,12 +46,11 @@ export function PackagesContent() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto max-w-3xl text-center">
-              <TrustBadge>Available through participating employers</TrustBadge>
               <h1 className="mt-6 text-4xl font-bold tracking-tight text-pantri-foreground sm:text-5xl">
                 Built around real life.
               </h1>
               <p className="mt-4 text-lg text-pantri-muted">
-                Household-sized food packages with live pricing — Bachelor, Couple, Family, and
+                Household-sized food packages with live pricing  Bachelor, Couple, Family, and
                 more. Order in the Pantri app with payroll payment plans.
               </p>
             </div>

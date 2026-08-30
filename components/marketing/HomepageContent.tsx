@@ -19,22 +19,22 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Choose your food",
-    description: "Shop groceries or select a ready-made package.",
+    description: "Shop groceries or select a ready-made package within your 1.5× salary limit.",
   },
   {
     step: "02",
     title: "Choose your payment plan",
-    description: "Select an available payroll payment option.",
+    description: "Pick 5 or 6 equal monthly payroll deductions  no cash upfront.",
   },
   {
     step: "03",
     title: "Get your food",
-    description: "Your order is fulfilled after the required initial payment and approval.",
+    description: "Your order is fulfilled after employer approval.",
   },
   {
     step: "04",
     title: "Pay through payroll",
-    description: "Installments are deducted through your employer's payroll process.",
+    description: "Equal installments are deducted through your employer's payroll process.",
   },
 ];
 
@@ -155,12 +155,14 @@ export function HomepageContent() {
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="animate-fade-up">
               <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-pantri-charcoal sm:text-5xl lg:text-[3.25rem]">
-                Get the food you need today.{" "}
-                <span className="text-pantri-primary">Pay from your salary.</span>
+                A full table today.{" "}
+                <span className="text-pantri-primary">Room in your paycheck for tomorrow.</span>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-pantri-muted">
-                Pantri helps employees buy groceries, family food packages and event supplies
-                today, while convenient payroll deductions spread the cost over time.
+                Pantri helps you stock the food your household needs now, while payroll
+                deductions spread the cost gently across your salaryso you can eat well,
+                cover your bills, and still set money aside for investments that help you earn
+                more.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <CTAButton href="/shop">Start Shopping</CTAButton>
@@ -205,7 +207,7 @@ export function HomepageContent() {
           <SectionHeading
             eyebrow="Shop"
             title="What can you buy?"
-            description="Groceries, family packages, protein, and event supplies — all with payroll-friendly payment plans."
+            description="Groceries, family packages, protein, and event supplies  all with payroll-friendly payment plans."
           />
         </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -277,7 +279,7 @@ export function HomepageContent() {
               light
               align="left"
               title="Your salary. Your food. Your choice."
-              description="Pantri gives employees of participating organizations a simpler way to purchase essential food without paying the full amount upfront."
+              description="Pantri gives employees of participating organizations a simpler way to purchase essential food with equal monthly payroll deductions  no cash upfront."
             />
             <div className="mt-8 flex flex-wrap gap-4">
               <CTAButton href="/for-employees" variant="primary">
@@ -357,7 +359,7 @@ export function HomepageContent() {
                 ))}
               </div>
               <p className="mt-4 text-xs text-pantri-muted">
-                Illustrative dashboard preview — sign in to your portal for live data.
+                Illustrative dashboard preview  sign in to your portal for live data.
               </p>
             </div>
           </ScrollReveal>
@@ -399,10 +401,10 @@ export function HomepageContent() {
             </div>
             <div className="mt-6 flex gap-4">
               <span className="rounded-lg border border-pantri-border px-4 py-2 text-sm text-pantri-muted">
-                App Store — coming soon
+                App Store  coming soon
               </span>
               <span className="rounded-lg border border-pantri-border px-4 py-2 text-sm text-pantri-muted">
-                Google Play — coming soon
+                Google Play  coming soon
               </span>
             </div>
           </ScrollReveal>

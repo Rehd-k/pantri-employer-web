@@ -18,7 +18,7 @@ export default function RegisterPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-slate-50 px-4 text-center">
       <p className="text-sm text-slate-600">
-        Employer accounts are created by Pantri — redirecting you to contact…
+        Employer accounts are created by Pantri  redirecting you to contact…
       </p>
       <Link
         href="/contact?topic=Employer%20enquiry"

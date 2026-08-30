@@ -1,4 +1,4 @@
-# Spec 19 — Pantry & Smart Reorder (Future Vision)
+# Spec 19  Pantry & Smart Reorder (Future Vision)
 
 ## Route & files
 
@@ -20,11 +20,11 @@ Headlines:
 
 Visual inventory cards (static):
 
-- Rice — 65% remaining
-- Beans — 20% remaining
-- Oil — Low
-- Chicken — Available
-- Tomatoes — Low — Expiring soon
+- Rice  65% remaining
+- Beans  20% remaining
+- Oil  Low
+- Chicken  Available
+- Tomatoes  Low  Expiring soon
 
 Progress bars, status badges.
 

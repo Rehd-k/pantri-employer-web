@@ -1,4 +1,4 @@
-# Spec 07 — Nutrition Centre
+# Spec 07  Nutrition Centre
 
 ## Route & files
 
@@ -29,7 +29,7 @@ Each card: icon, title, 1-line description.
 2. Get personalized meal suggestions
 3. Shop ingredients from your plan
 
-Reference stitch mobile designs for tone — do not copy PantryPay naming.
+Reference stitch mobile designs for tone  do not copy PantryPay naming.
 
 ### App CTA
 
@@ -41,7 +41,7 @@ Phone mockup + **Explore Nutrition in the App** → `/download`
 
 ## Data source
 
-Static content. Optional future: public nutrition catalog API (not yet exposed — do not block on backend).
+Static content. Optional future: public nutrition catalog API (not yet exposed  do not block on backend).
 
 ## Acceptance checklist
 

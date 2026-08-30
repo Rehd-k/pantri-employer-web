@@ -10,7 +10,7 @@ const TRUST_ITEMS = [
   {
     icon: "🔒",
     title: "Secure payments",
-    description: "Initial payments and plan confirmations use secure checkout flows in the app.",
+    description: "Plan confirmations and payroll authorization use secure flows in the app.",
   },
   {
     icon: "🏢",
@@ -20,7 +20,7 @@ const TRUST_ITEMS = [
   {
     icon: "👁",
     title: "Transparent pricing",
-    description: "See package totals, upfront amounts, and monthly deductions before you order.",
+    description: "See your 1.5× salary limit, package totals, and monthly deductions before you order.",
   },
   {
     icon: "📍",
@@ -30,7 +30,7 @@ const TRUST_ITEMS = [
   {
     icon: "👤",
     title: "Secure account",
-    description: "Your Pantri account is tied to verified workplace onboarding — not open signup alone.",
+    description: "Your Pantri account is tied to verified workplace onboarding  not open signup alone.",
   },
   {
     icon: "🛡",
@@ -57,7 +57,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "The plans are clear — I knew the upfront and the monthly amount before I confirmed the order.",
+      "The plans are clear  I knew my limit and the monthly deduction before I confirmed the order.",
     role: "Employee using Pantri packages",
   },
   {
@@ -81,7 +81,7 @@ export function FaqPageContent() {
                 Questions, answered
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-pantri-muted">
-                How Pantri works, who can use it, and how we keep purchases clear and secure — without
+                How Pantri works, who can use it, and how we keep purchases clear and secure  without
                 pretending to be a loan app.
               </p>
             </div>
@@ -94,7 +94,7 @@ export function FaqPageContent() {
           <SectionHeading
             eyebrow="Trust"
             title="Built for clarity and care"
-            description="Practical signals — not invented certifications or fake partnership badges."
+            description="Practical signals  not invented certifications or fake partnership badges."
           />
         </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -111,7 +111,7 @@ export function FaqPageContent() {
           ))}
         </div>
         <p className="mt-8 text-center text-sm text-pantri-muted">
-          Employer and partner logos will appear here when published — none invented for this page.
+          Employer and partner logos will appear here when published  none invented for this page.
         </p>
       </Section>
 
@@ -120,7 +120,7 @@ export function FaqPageContent() {
           <SectionHeading
             eyebrow="Stories"
             title="What people say"
-            description="Placeholder testimonials for layout — not attributed to real named companies."
+            description="Placeholder testimonials for layout  not attributed to real named companies."
           />
         </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-2">

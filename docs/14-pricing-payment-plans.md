@@ -1,4 +1,4 @@
-# Spec 14 — Pricing / Payment Plans
+# Spec 14  Pricing / Payment Plans
 
 ## Route & files
 
@@ -33,7 +33,7 @@ Full-width `PaymentCalculator` component.
 
 ### Eligibility disclaimer
 
-> Actual eligibility, limits, availability and terms depend on your employer and payroll arrangement. Pantri is a food purchasing platform — not a personal loan product.
+> Actual eligibility, limits, availability and terms depend on your employer and payroll arrangement. Pantri is a food purchasing platform  not a personal loan product.
 
 ### FAQ snippet
 
@@ -41,7 +41,7 @@ Full-width `PaymentCalculator` component.
 
 ## Data source
 
-`lib/marketing.ts` — `PAYMENT_PLANS`, `calculatePayment`.
+`lib/marketing.ts`  `PAYMENT_PLANS`, `calculatePayment`.
 
 ## Acceptance checklist
 

@@ -9,7 +9,7 @@ const FEATURES = [
     icon: "✅",
     title: "Employee verification",
     description:
-      "Confirm staff against your roster before payroll plans unlock — each employer stays in their own tenant boundary.",
+      "Confirm staff against your roster before payroll plans unlock  each employer stays in their own tenant boundary.",
   },
   {
     icon: "📅",
@@ -45,7 +45,7 @@ const FEATURES = [
     icon: "💰",
     title: "Outstanding deductions",
     description:
-      "See what remains on each plan — balances, months left, and exposure at a glance.",
+      "See what remains on each plan  balances, months left, and exposure at a glance.",
   },
   {
     icon: "📜",
@@ -74,8 +74,8 @@ export function HrPayrollContent() {
               Designed for the people who run payroll.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/80">
-              Pantri deductions plug into your existing payroll process — schedules, exports, and
-              approvals — without mixing data across employers.
+              Pantri deductions plug into your existing payroll process  schedules, exports, and
+              approvals  without mixing data across employers.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <CTAButton href="/contact?topic=Payroll" variant="secondary">
@@ -98,7 +98,7 @@ export function HrPayrollContent() {
           <SectionHeading
             eyebrow="Capabilities"
             title="What payroll admins get"
-            description="Tools for verification, schedules, and reconciliation — scoped to your organisation only."
+            description="Tools for verification, schedules, and reconciliation  scoped to your organisation only."
           />
         </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -117,7 +117,7 @@ export function HrPayrollContent() {
               align="left"
               eyebrow="Portal preview"
               title="Payroll runs at a glance"
-              description="Illustrative mock of the payroll runs view — live data appears after Pantri onboards your organisation."
+              description="Illustrative mock of the payroll runs view  live data appears after Pantri onboards your organisation."
             />
             <div className="mt-6 flex flex-wrap gap-4">
               <CTAButton href="/login">Existing partners: sign in</CTAButton>

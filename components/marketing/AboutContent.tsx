@@ -20,7 +20,7 @@ const FUTURE = [
   },
   {
     title: "Pantri-branded products",
-    description: "Trusted everyday items under the Pantri name — when the time is right.",
+    description: "Trusted everyday items under the Pantri name  when the time is right.",
   },
   {
     title: "Farmer & supplier network",
@@ -51,7 +51,7 @@ export function AboutContent() {
                 Better food. Smarter living.
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-pantri-muted">
-                Pantri is a food purchasing platform with payroll-backed payment plans — helping
+                Pantri is a food purchasing platform with payroll-backed payment plans  helping
                 employees get the food they need today and pay through salary.
               </p>
             </div>
@@ -63,20 +63,20 @@ export function AboutContent() {
         <ScrollReveal>
           <SectionHeading
             eyebrow="Our story"
-            title="Food is essential — buying enough at once shouldn&apos;t be so hard"
+            title="Food is essential  buying enough at once shouldn&apos;t be so hard"
             description="Pantri begins with a simple idea: by combining technology, bulk purchasing, and employer payroll systems, food purchasing becomes easier and more predictable."
           />
         </ScrollReveal>
         <div className="mx-auto max-w-3xl space-y-4 text-base leading-relaxed text-pantri-muted">
           <p>
             Households know the pressure of restocking rice, oil, protein, and the extras that make a
-            home run. Waiting for payday — or stretching a basket too thin — shouldn&apos;t decide
+            home run. Waiting for payday  or stretching a basket too thin  shouldn&apos;t decide
             what&apos;s on the table.
           </p>
           <p>
             Pantri partners with employers so eligible employees can shop groceries, family packages,
             and event supplies, then spread the cost through authorized payroll deductions. We are a
-            food platform first — not a personal loan product.
+            food platform first  not a personal loan product.
           </p>
         </div>
       </Section>
@@ -86,7 +86,7 @@ export function AboutContent() {
           <SectionHeading
             eyebrow="Ecosystem"
             title="From farm to your home"
-            description="How we think about the path food takes — today and as Pantri grows."
+            description="How we think about the path food takes  today and as Pantri grows."
           />
         </ScrollReveal>
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-2 sm:gap-3">
@@ -116,7 +116,7 @@ export function AboutContent() {
           <SectionHeading
             eyebrow="Our long-term vision"
             title="From your pantry to the farm."
-            description="Aspirations for the future — not facilities or brands we claim to operate today."
+            description="Aspirations for the future  not facilities or brands we claim to operate today."
           />
         </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-3">

@@ -29,7 +29,7 @@ export function EventsContent() {
                 Planning an event? Let Pantri handle the food list.
               </h1>
               <p className="mt-6 text-lg text-pantri-muted">
-                Get a quick estimate for Nigerian celebrations — then shop packages or talk to Pantri
+                Get a quick estimate for Nigerian celebrations  then shop packages or talk to Pantri
                 for a real quote.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -53,7 +53,7 @@ export function EventsContent() {
           <SectionHeading
             eyebrow="Interactive demo"
             title="Build your food estimate"
-            description="Client-side estimator — not a guaranteed quote. Final quantities depend on menu, region, and catalogue."
+            description="Client-side estimator  not a guaranteed quote. Final quantities depend on menu, region, and catalogue."
           />
         </ScrollReveal>
         <EventPlannerForm />

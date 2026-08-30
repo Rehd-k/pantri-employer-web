@@ -1,4 +1,4 @@
-# Spec 11 — HR & Payroll
+# Spec 11  HR & Payroll
 
 ## Route & files
 

@@ -12,7 +12,7 @@ const INVENTORY = [
     name: "Tomatoes",
     remaining: 18,
     status: "expiring" as const,
-    note: "Low — Expiring soon",
+    note: "Low  Expiring soon",
   },
 ];
 
@@ -36,7 +36,7 @@ export function PantryContent() {
     <>
       <div className="border-b border-pantri-border bg-pantri-accent/10 px-4 py-3 text-center">
         <p className="text-sm font-semibold text-pantri-foreground">
-          Coming soon in the Pantri app — roadmap preview only
+          Coming soon in the Pantri app  roadmap preview only
         </p>
       </div>
 
@@ -52,7 +52,7 @@ export function PantryContent() {
                 Never run out of the things you use most.
               </p>
               <p className="mt-6 text-lg text-pantri-muted">
-                A smart pantry and reorder experience planned for the Pantri mobile app — not live on
+                A smart pantry and reorder experience planned for the Pantri mobile app  not live on
                 the web today.
               </p>
             </div>
@@ -65,7 +65,7 @@ export function PantryContent() {
           <SectionHeading
             eyebrow="Demo inventory"
             title="See your staples at a glance"
-            description="Static illustration — no live inventory sync on this website."
+            description="Static illustration  no live inventory sync on this website."
           />
         </ScrollReveal>
         <div className="mx-auto grid max-w-3xl gap-4">
@@ -99,7 +99,7 @@ export function PantryContent() {
           <SectionHeading
             eyebrow="Smart reorder"
             title="Gentle nudges when you might need more"
-            description="Example AI-style recommendations — illustrative copy only."
+            description="Example AI-style recommendations  illustrative copy only."
           />
         </ScrollReveal>
         <div className="mx-auto grid max-w-3xl gap-4 sm:grid-cols-3">
@@ -118,7 +118,7 @@ export function PantryContent() {
         <div className="mt-10 text-center">
           <CTAButton href="/download">Review Recommendations</CTAButton>
           <p className="mt-4 text-xs text-pantri-muted">
-            Opens the download page — pantry features ship in the app when ready.
+            Opens the download page  pantry features ship in the app when ready.
           </p>
         </div>
       </Section>

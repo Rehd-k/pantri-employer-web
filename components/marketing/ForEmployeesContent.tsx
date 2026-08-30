@@ -9,12 +9,12 @@ const EMPLOYEE_STEPS = [
   {
     step: "01",
     title: "Choose your food",
-    description: "Browse groceries, family packages, or event supplies in the Pantri app.",
+    description: "Browse groceries, family packages, or event supplies in the Pantri app  within your 1.5× salary limit.",
   },
   {
     step: "02",
     title: "Select your payment plan",
-    description: "Pick 20% + 6 months or 25% + 5 months — whichever your employer offers.",
+    description: "Pick 5 or 6 equal monthly deductions  no cash upfront  whichever your employer offers.",
   },
   {
     step: "03",
@@ -24,12 +24,12 @@ const EMPLOYEE_STEPS = [
   {
     step: "04",
     title: "Receive your food",
-    description: "After initial payment and approval, Pantri fulfils your order.",
+    description: "After employer approval, Pantri fulfils your order.",
   },
   {
     step: "05",
     title: "Automatic deductions",
-    description: "Remaining installments come out through payroll — no separate loan chase.",
+    description: "Equal installments come out through payroll. As you pay down, you can shop again up to your limit.",
   },
 ];
 
@@ -53,8 +53,11 @@ export function ForEmployeesContent() {
                 Your salary. Your food. Your choice.
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-pantri-muted">
-                Pantri lets you buy the food you need today and pay through your salary — a food
-                purchasing platform with payroll-backed plans, not a personal loan.
+                Pantri lets you stock the food your household needs now and pay through your
+                salarya food purchasing platform with payroll-backed plans, not a personal
+                loan. Eat well, cover your bills, and still keep room for investments that help
+                you earn more. Buy in bulk before prices climb again (in Nigeria, they only
+                know one wayup), and inflation can&apos;t empty your table.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <CTAButton href="#eligibility">Check If My Employer Participates</CTAButton>
@@ -125,7 +128,7 @@ export function ForEmployeesContent() {
           <SectionHeading
             eyebrow="FAQ"
             title="Common employee questions"
-            description="Straight answers about eligibility, plans, and what Pantri is — and is not."
+            description="Straight answers about eligibility, plans, and what Pantri is  and is not."
           />
         </ScrollReveal>
         <div className="mx-auto max-w-3xl">

@@ -1,4 +1,9 @@
-import { calculatePayment, PAYMENT_PLANS } from "./marketing";
+import {
+  calculatePayment,
+  DEFAULT_SALARY_NAIRA,
+  nairaToKobo,
+  PAYMENT_PLANS,
+} from "./marketing";
 
 export const EVENT_TYPES = [
   "Wedding",
@@ -105,7 +110,11 @@ export function estimateEventFood(input: EventPlannerInput): EventEstimate {
   else if (guests >= 30) packageTier = "Family+";
   else packageTier = "Couple / small gathering";
 
-  const paymentExample = calculatePayment(midpointKobo, PAYMENT_PLANS[0]);
+  const paymentExample = calculatePayment(
+    nairaToKobo(DEFAULT_SALARY_NAIRA),
+    PAYMENT_PLANS[0],
+    midpointKobo,
+  );
 
   const locationNote = input.location?.trim()
     ? ` for ${input.location.trim()}`

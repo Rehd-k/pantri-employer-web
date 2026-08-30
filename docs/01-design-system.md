@@ -1,16 +1,16 @@
-# Spec 01 — Design System (Reference)
+# Spec 01  Design System (Reference)
 
 **Status:** Implemented in Phase 1. Dark mode added.
 
 ## Files
 
-- [`app/globals.css`](../../app/globals.css) — Tailwind v4 `@theme` tokens, `@source` paths, `.dark` overrides in `@layer theme`
-- [`app/layout.tsx`](../../app/layout.tsx) — **single** CSS entry (Inter font + globals.css). Do not add fonts/CSS to nested layouts.
-- [`lib/theme.ts`](../../lib/theme.ts) — theme preference helpers
-- [`components/marketing/ThemeProvider.tsx`](../../components/marketing/ThemeProvider.tsx) — light / dark / system context
-- [`components/marketing/ThemeToggle.tsx`](../../components/marketing/ThemeToggle.tsx) — nav theme switcher
-- [`components/marketing/ThemeScript.tsx`](../../components/marketing/ThemeScript.tsx) — FOUC prevention inline script
-- [`components/marketing/primitives.tsx`](../../components/marketing/primitives.tsx) — Container, Section, CTAButton, TrustBadge
+- [`app/globals.css`](../../app/globals.css)  Tailwind v4 `@theme` tokens, `@source` paths, `.dark` overrides in `@layer theme`
+- [`app/layout.tsx`](../../app/layout.tsx)  **single** CSS entry (Inter font + globals.css). Do not add fonts/CSS to nested layouts.
+- [`lib/theme.ts`](../../lib/theme.ts)  theme preference helpers
+- [`components/marketing/ThemeProvider.tsx`](../../components/marketing/ThemeProvider.tsx)  light / dark / system context
+- [`components/marketing/ThemeToggle.tsx`](../../components/marketing/ThemeToggle.tsx)  nav theme switcher
+- [`components/marketing/ThemeScript.tsx`](../../components/marketing/ThemeScript.tsx)  FOUC prevention inline script
+- [`components/marketing/primitives.tsx`](../../components/marketing/primitives.tsx)  Container, Section, CTAButton, TrustBadge
 - [`components/marketing/MarketingShell.tsx`](../../components/marketing/MarketingShell.tsx)
 - [`components/marketing/MarketingNav.tsx`](../../components/marketing/MarketingNav.tsx)
 - [`components/marketing/MarketingFooter.tsx`](../../components/marketing/MarketingFooter.tsx)
@@ -18,9 +18,9 @@
 - [`components/marketing/PaymentCalculator.tsx`](../../components/marketing/PaymentCalculator.tsx)
 - [`components/marketing/ScrollReveal.tsx`](../../components/marketing/ScrollReveal.tsx)
 - [`components/marketing/FaqAccordion.tsx`](../../components/marketing/FaqAccordion.tsx)
-- [`lib/marketing.ts`](../../lib/marketing.ts) — payment plan math
+- [`lib/marketing.ts`](../../lib/marketing.ts)  payment plan math
 
-## Brand tokens (semantic — adapt to light/dark)
+## Brand tokens (semantic  adapt to light/dark)
 
 | Token | Light | Dark |
 |-------|-------|------|
@@ -43,7 +43,7 @@ Legacy aliases `pantri-cream`, `pantri-charcoal`, `pantri-muted` also switch in 
 
 ## Required classes for new marketing pages
 
-Use **semantic tokens** — never hardcode `bg-white` or `text-black`:
+Use **semantic tokens**  never hardcode `bg-white` or `text-black`:
 
 | Use case | Class |
 |----------|-------|
@@ -57,13 +57,13 @@ Use **semantic tokens** — never hardcode `bg-white` or `text-black`:
 
 ## Rules for new pages
 
-- Reuse `MarketingShell` via `app/(marketing)/layout.tsx` — dark mode works automatically.
-- **Do not** import CSS or `next/font` in `(marketing)/layout.tsx` — it breaks dev CSS loading. Fonts live in root `app/layout.tsx` only.
-- **Every new marketing page must use semantic tokens** — no raw `bg-white`, `#fff`, or light-only colors.
+- Reuse `MarketingShell` via `app/(marketing)/layout.tsx`  dark mode works automatically.
+- **Do not** import CSS or `next/font` in `(marketing)/layout.tsx`  it breaks dev CSS loading. Fonts live in root `app/layout.tsx` only.
+- **Every new marketing page must use semantic tokens**  no raw `bg-white`, `#fff`, or light-only colors.
 - Test all new pages in **light, dark, and system** modes before marking done.
 - Do not import portal `components/ui/*` on marketing pages unless intentional.
 - Money: integer kobo internally, `formatNaira()` for display.
-- Portal pages (`/portal/*`) keep slate/emerald styling — dark mode not required there yet.
+- Portal pages (`/portal/*`) keep slate/emerald styling  dark mode not required there yet.
 
 ## Acceptance checklist (dark mode)
 

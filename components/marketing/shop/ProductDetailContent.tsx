@@ -3,7 +3,12 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { formatNaira } from "@/lib/format";
-import { calculatePayment, PAYMENT_PLANS } from "@/lib/marketing";
+import {
+  calculatePayment,
+  DEFAULT_SALARY_NAIRA,
+  nairaToKobo,
+  PAYMENT_PLANS,
+} from "@/lib/marketing";
 import { publicApi, PublicApiError } from "@/lib/public-api";
 import type { PublicProductDetail, PublicProductPack } from "@/lib/public-types";
 import { Container, CTAButton, Section, TrustBadge } from "../primitives";
@@ -67,7 +72,7 @@ export function ProductDetailContent({ productId }: { productId: string }) {
       [...packs].sort((a, b) => a.priceKobo - b.priceKobo)[0]?.priceKobo ??
       product?.fromPriceKobo ??
       0;
-    return calculatePayment(price, PAYMENT_PLANS[0]);
+    return calculatePayment(nairaToKobo(DEFAULT_SALARY_NAIRA), PAYMENT_PLANS[0], price);
   }, [selectedPack, packs, product]);
 
   if (loading) {
@@ -218,11 +223,13 @@ export function ProductDetailContent({ productId }: { productId: string }) {
 
               <div className="pantri-card mt-8 p-5">
                 <p className="text-sm font-semibold text-pantri-foreground">
-                  Example with {PAYMENT_PLANS[0].label}
+                  Example with {PAYMENT_PLANS[0].label} · no upfront
                 </p>
                 <p className="mt-2 text-sm text-pantri-muted">
-                  {formatNaira(paymentExample.initialKobo)} upfront ·{" "}
                   {formatNaira(paymentExample.monthlyKobo)}/mo × {paymentExample.months}
+                  {paymentExample.overLimit
+                    ? ` · capped at ${formatNaira(paymentExample.creditLimitKobo)} (1.5× salary limit)`
+                    : " · within your 1.5× salary limit"}
                 </p>
               </div>
 

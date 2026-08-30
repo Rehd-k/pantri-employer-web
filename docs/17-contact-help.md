@@ -1,4 +1,4 @@
-# Spec 17 — Contact & Help Centre
+# Spec 17  Contact & Help Centre
 
 ## Route & files
 
@@ -28,7 +28,7 @@ Fields:
 - Topic: General, Employer enquiry, Business/Sales, Payroll, Supplier, Support
 - Message
 
-Submit: client-side only for now — show success state ("We'll be back to you within 1 business day"). No backend endpoint required in Phase 1.
+Submit: client-side only for now  show success state ("We'll be back to you within 1 business day"). No backend endpoint required in Phase 1.
 
 ### Contact details (placeholders)
 

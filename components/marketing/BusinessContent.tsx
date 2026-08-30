@@ -28,7 +28,7 @@ const CAPABILITIES = [
   },
   {
     title: "Contract pricing",
-    description: "Negotiated rates for recurring volume — when your account is live.",
+    description: "Negotiated rates for recurring volume  when your account is live.",
   },
   {
     title: "Scheduled deliveries",
@@ -53,7 +53,7 @@ export function BusinessContent() {
               </h1>
               <p className="mt-6 text-lg text-pantri-muted">
                 A future channel for hotels, kitchens, and institutions that need reliable bulk food
-                supply — separate from Pantri&apos;s employee payroll benefit.
+                supply  separate from Pantri&apos;s employee payroll benefit.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <CTAButton href="/contact?topic=Business%2FSales">Talk to Sales</CTAButton>
@@ -71,7 +71,7 @@ export function BusinessContent() {
           <SectionHeading
             eyebrow="Who it&apos;s for"
             title="Built for institutional buyers"
-            description="Segments we plan to serve — tell us your category when you contact sales."
+            description="Segments we plan to serve  tell us your category when you contact sales."
           />
         </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -94,7 +94,7 @@ export function BusinessContent() {
           <SectionHeading
             eyebrow="Capabilities"
             title="On our roadmap"
-            description="These features are planned for corporate bulk — clearly labelled so nothing is oversold."
+            description="These features are planned for corporate bulk  clearly labelled so nothing is oversold."
           />
         </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-2">
@@ -111,7 +111,7 @@ export function BusinessContent() {
           ))}
         </div>
         <p className="mt-8 text-center text-sm text-pantri-muted">
-          Our roadmap — capabilities ship when ready. No invented client logos or live contracts
+          Our roadmap  capabilities ship when ready. No invented client logos or live contracts
           claimed here.
         </p>
       </Section>

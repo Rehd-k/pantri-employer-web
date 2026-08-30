@@ -137,7 +137,7 @@ export default function OrdersPage() {
       header: "Items",
       accessor: (order) => (
         <span className="text-xs text-slate-500">
-          {order.items.map((item) => `${item.quantity}× ${item.name}`).join(", ") || "—"}
+          {order.items.map((item) => `${item.quantity}× ${item.name}`).join(", ") || ""}
         </span>
       ),
     },

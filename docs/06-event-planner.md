@@ -1,4 +1,4 @@
-# Spec 06 — Event Food Planner
+# Spec 06  Event Food Planner
 
 ## Route & files
 
@@ -11,7 +11,7 @@
 
 ## Purpose
 
-Interactive demo: user plans food for Nigerian events. **No backend Event module yet** — use client-side estimation.
+Interactive demo: user plans food for Nigerian events. **No backend Event module yet**  use client-side estimation.
 
 Headline: **Planning an event? Let Pantri handle the food list.**
 
@@ -34,7 +34,7 @@ Form fields:
 
 On submit, show **EventResults**:
 
-- Estimated food quantities (rice kg, oil litres, protein portions — use simple multipliers per guest)
+- Estimated food quantities (rice kg, oil litres, protein portions  use simple multipliers per guest)
 - Estimated cost range
 - Suggested shopping list (bulleted)
 - Recommended package tier

@@ -36,7 +36,7 @@ export const RECIPES: Recipe[] = [
       "Add stock, seasoning, and rice; cook covered until done.",
       "Steam on low heat for a smoky finish.",
     ],
-    nutritionNote: "Approx. 420 kcal per serving — estimate only.",
+    nutritionNote: "Approx. 420 kcal per serving  estimate only.",
     gradient: "from-orange-400/40 to-red-600/30",
   },
   {
@@ -62,7 +62,7 @@ export const RECIPES: Recipe[] = [
       "Add stock and simmer.",
       "Finish with greens and seasoning.",
     ],
-    nutritionNote: "Approx. 380 kcal per serving — estimate only.",
+    nutritionNote: "Approx. 380 kcal per serving  estimate only.",
     gradient: "from-emerald-500/40 to-yellow-600/20",
   },
   {
@@ -86,7 +86,7 @@ export const RECIPES: Recipe[] = [
       "Sauté vegetables and protein.",
       "Toss rice with curry and seasoning until hot.",
     ],
-    nutritionNote: "Approx. 390 kcal per serving — estimate only.",
+    nutritionNote: "Approx. 390 kcal per serving  estimate only.",
     gradient: "from-lime-400/40 to-amber-500/30",
   },
   {
@@ -109,7 +109,7 @@ export const RECIPES: Recipe[] = [
       "Cook tomato base until thick.",
       "Simmer chicken in stew until tender.",
     ],
-    nutritionNote: "Approx. 310 kcal per serving — estimate only.",
+    nutritionNote: "Approx. 310 kcal per serving  estimate only.",
     gradient: "from-red-400/40 to-orange-500/30",
   },
   {
@@ -120,7 +120,7 @@ export const RECIPES: Recipe[] = [
     caloriesApprox: 450,
     servings: 4,
     tag: "Cook with what I have",
-    summary: "Honey beans with ripe plantain — simple and filling.",
+    summary: "Honey beans with ripe plantain  simple and filling.",
     ingredients: [
       "Honey beans or black-eyed peas",
       "Ripe plantain",
@@ -132,7 +132,7 @@ export const RECIPES: Recipe[] = [
       "Season with pepper sauce.",
       "Fry or roast plantain and serve alongside.",
     ],
-    nutritionNote: "Approx. 450 kcal per serving — estimate only.",
+    nutritionNote: "Approx. 450 kcal per serving  estimate only.",
     gradient: "from-amber-400/40 to-rose-500/20",
   },
   {
@@ -156,7 +156,7 @@ export const RECIPES: Recipe[] = [
       "Mix with oil and seasoning.",
       "Portion into wraps or ramekins; steam until set.",
     ],
-    nutritionNote: "Approx. 280 kcal per serving — estimate only.",
+    nutritionNote: "Approx. 280 kcal per serving  estimate only.",
     gradient: "from-yellow-300/40 to-orange-400/30",
   },
   {
@@ -180,7 +180,7 @@ export const RECIPES: Recipe[] = [
       "Warm sauce with vegetables.",
       "Toss together and serve.",
     ],
-    nutritionNote: "Approx. 400 kcal per serving — estimate only.",
+    nutritionNote: "Approx. 400 kcal per serving  estimate only.",
     gradient: "from-rose-400/40 to-yellow-500/20",
   },
   {
@@ -204,7 +204,7 @@ export const RECIPES: Recipe[] = [
       "Add protein if using.",
       "Finish with vegetables just until wilted.",
     ],
-    nutritionNote: "Approx. 220 kcal per serving — estimate only.",
+    nutritionNote: "Approx. 220 kcal per serving  estimate only.",
     gradient: "from-green-400/40 to-teal-500/30",
   },
 ];

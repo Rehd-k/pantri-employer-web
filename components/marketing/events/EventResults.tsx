@@ -1,5 +1,6 @@
 import { formatNaira } from "@/lib/format";
 import type { EventEstimate, EventType } from "@/lib/event-planner";
+import { DEFAULT_SALARY_NAIRA, nairaToKobo } from "@/lib/marketing";
 import { CTAButton } from "../primitives";
 
 export function EventResults({
@@ -51,12 +52,15 @@ export function EventResults({
         </p>
         <p className="mt-1 font-semibold text-pantri-foreground">{estimate.packageTier}</p>
         <p className="mt-3 text-sm text-pantri-muted">
-          Example with 20% + 6 months on midpoint{" "}
-          {formatNaira(estimate.midpointKobo)}:{" "}
+          Example with {estimate.paymentExample.months} months on midpoint{" "}
+          {formatNaira(estimate.midpointKobo)}
+          {estimate.paymentExample.overLimit
+            ? ` (capped at ${formatNaira(estimate.paymentExample.creditLimitKobo)} FGV for a ${formatNaira(nairaToKobo(DEFAULT_SALARY_NAIRA))} salary example)`
+            : ""}
+          :{" "}
           <span className="font-semibold text-pantri-foreground">
-            {formatNaira(estimate.paymentExample.initialKobo)} upfront ·{" "}
             {formatNaira(estimate.paymentExample.monthlyKobo)}/mo ×{" "}
-            {estimate.paymentExample.months}
+            {estimate.paymentExample.months} · no upfront
           </span>
         </p>
       </div>

@@ -216,7 +216,7 @@ export function PackageDetail({ packageId }: { packageId: string }) {
 
           <ScrollReveal>
             <h2 className="mb-4 text-xl font-bold text-pantri-foreground">Payment plan</h2>
-            <PaymentCalculator key={pkg.id} defaultPackageNaira={defaultPackageNaira} />
+            <PaymentCalculator key={pkg.id} defaultPurchaseNaira={defaultPackageNaira} />
           </ScrollReveal>
         </div>
       </Section>

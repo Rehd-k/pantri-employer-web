@@ -1,5 +1,5 @@
 // Mirrors of backend DTOs (see backend/src/**/dto/*.dto.ts). Keep in sync
-// with the NestJS source of truth — never guess shapes independently.
+// with the NestJS source of truth  never guess shapes independently.
 
 export type UserRole = "ADMIN" | "EMPLOYER" | "EMPLOYEE" | "SUPPLIER" | "LOGISTICS";
 export type UserStatus = "ACTIVE" | "PENDING_APPROVAL" | "SUSPENDED";

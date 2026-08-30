@@ -1,4 +1,4 @@
-# Spec 05 — Food Packages
+# Spec 05  Food Packages
 
 ## Route & files
 

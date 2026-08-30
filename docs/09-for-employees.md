@@ -1,4 +1,4 @@
-# Spec 09 — For Employees
+# Spec 09  For Employees
 
 ## Route & files
 
@@ -37,7 +37,7 @@ Choose food → Select plan → Payroll authorization → Receive food → Autom
 
 ### Download app
 
-Prominent app section — employees order via mobile app.
+Prominent app section  employees order via mobile app.
 
 CTA: **Download Pantri** → `/download`
 

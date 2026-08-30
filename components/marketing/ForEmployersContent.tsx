@@ -10,7 +10,7 @@ const VALUE_PROPS = [
     icon: "🥗",
     title: "Employee welfare",
     description:
-      "Help employees manage food expenses with payroll-backed purchasing — a benefit they use every month.",
+      "Help employees manage food expenses with payroll-backed purchasing  a benefit they use every month.",
   },
   {
     icon: "📋",
@@ -28,7 +28,7 @@ const VALUE_PROPS = [
     icon: "🤝",
     title: "Employee retention",
     description:
-      "A practical food benefit employees actually use — not another unused perk on paper.",
+      "A practical food benefit employees actually use  not another unused perk on paper.",
   },
   {
     icon: "📊",
@@ -43,7 +43,7 @@ const ONBOARDING_STEPS = [
     step: "01",
     title: "Contact Pantri",
     description:
-      "Tell us about your organisation. Pantri (or a platform admin) creates your employer account — companies do not self-register on the website.",
+      "Tell us about your organisation. Pantri (or a platform admin) creates your employer account  companies do not self-register on the website.",
     href: "/contact?topic=Employer%20enquiry" as string | null,
   },
   {
@@ -119,7 +119,7 @@ export function ForEmployersContent() {
           <SectionHeading
             eyebrow="Why Pantri"
             title="Built for HR and payroll teams"
-            description="A food purchasing platform with payroll-backed plans — not a loan product bolted onto your books."
+            description="A food purchasing platform with payroll-backed plans  not a loan product bolted onto your books."
           />
         </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -184,7 +184,7 @@ export function ForEmployersContent() {
               </div>
 
               <p className="mt-4 text-xs text-pantri-muted">
-                Illustrative dashboard preview — sign in to your portal for live data.
+                Illustrative dashboard preview  sign in to your portal for live data.
               </p>
             </div>
           </ScrollReveal>
@@ -234,7 +234,7 @@ export function ForEmployersContent() {
               align="left"
               eyebrow="HR & payroll"
               title="Built to fit your payroll process"
-              description="Learn how Pantri deductions integrate with HR and payroll workflows — schedules, approvals, and reconciliation."
+              description="Learn how Pantri deductions integrate with HR and payroll workflows  schedules, approvals, and reconciliation."
             />
           </ScrollReveal>
           <ScrollReveal>

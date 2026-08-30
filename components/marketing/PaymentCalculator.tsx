@@ -4,26 +4,35 @@ import { useMemo, useState } from "react";
 import { formatNaira } from "@/lib/format";
 import {
   calculatePayment,
+  computeCreditLimitKobo,
+  DEFAULT_SALARY_NAIRA,
   nairaToKobo,
   PAYMENT_PLANS,
   type PaymentPlanId,
 } from "@/lib/marketing";
 
 export function PaymentCalculator({
-  defaultPackageNaira = 300_000,
+  defaultPurchaseNaira,
+  /** @deprecated Prefer defaultPurchaseNaira */
+  defaultPackageNaira,
 }: {
+  defaultPurchaseNaira?: number;
   defaultPackageNaira?: number;
 } = {}) {
-  const [salaryNaira, setSalaryNaira] = useState(500_000);
-  const [packageNaira, setPackageNaira] = useState(defaultPackageNaira);
-  const [planId, setPlanId] = useState<PaymentPlanId>("20_6");
+  const purchaseNaira = defaultPurchaseNaira ?? defaultPackageNaira;
+  const [salaryNaira, setSalaryNaira] = useState(DEFAULT_SALARY_NAIRA);
+  const [planId, setPlanId] = useState<PaymentPlanId>("6");
 
   const plan = PAYMENT_PLANS.find((p) => p.id === planId) ?? PAYMENT_PLANS[0];
 
-  const result = useMemo(
-    () => calculatePayment(nairaToKobo(packageNaira), plan),
-    [packageNaira, plan],
-  );
+  const result = useMemo(() => {
+    const salaryKobo = nairaToKobo(salaryNaira);
+    const purchaseKobo =
+      purchaseNaira !== undefined ? nairaToKobo(purchaseNaira) : undefined;
+    return calculatePayment(salaryKobo, plan, purchaseKobo);
+  }, [salaryNaira, plan, purchaseNaira]);
+
+  const fgvKobo = result.creditLimitKobo;
 
   return (
     <div className="pantri-card p-6 shadow-xl shadow-pantri-primary/5 sm:p-8">
@@ -44,19 +53,27 @@ export function PaymentCalculator({
             className="pantri-input"
           />
         </label>
-        <label className="block">
+        <div className="block">
           <span className="mb-1.5 block text-sm font-medium text-pantri-muted">
-            Food package value (₦)
+            Food package value / limit (₦)
           </span>
-          <input
-            type="number"
-            min={0}
-            step={10000}
-            value={packageNaira}
-            onChange={(e) => setPackageNaira(Number(e.target.value) || 0)}
-            className="pantri-input"
-          />
-        </label>
+          <div className="pantri-input flex items-center bg-pantri-surface-muted text-pantri-foreground">
+            {formatNaira(fgvKobo).replace(/^₦/, "")}
+          </div>
+          <p className="mt-1 text-xs text-pantri-muted">
+            Salary × 1.5  not editable
+          </p>
+        </div>
+        {purchaseNaira !== undefined ? (
+          <div className="block sm:col-span-2">
+            <span className="mb-1.5 block text-sm font-medium text-pantri-muted">
+              Order amount (₦)
+            </span>
+            <div className="pantri-input flex items-center bg-pantri-surface-muted text-pantri-foreground">
+              {formatNaira(nairaToKobo(purchaseNaira)).replace(/^₦/, "")}
+            </div>
+          </div>
+        ) : null}
         <label className="block sm:col-span-2">
           <span className="mb-1.5 block text-sm font-medium text-pantri-muted">
             Payment plan
@@ -75,16 +92,39 @@ export function PaymentCalculator({
         </label>
       </div>
 
-      <div className="mt-8 grid gap-4 rounded-xl bg-pantri-surface-muted p-5 sm:grid-cols-2 lg:grid-cols-4">
-        <ResultItem label="Package value" value={formatNaira(result.packageKobo)} />
-        <ResultItem label="Initial payment" value={formatNaira(result.initialKobo)} highlight />
-        <ResultItem label="Monthly deduction" value={formatNaira(result.monthlyKobo)} highlight />
+      {result.overLimit ? (
+        <div
+          className="mt-5 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-900/50 dark:bg-amber-950/40 dark:text-amber-100"
+          role="status"
+        >
+          This order ({formatNaira(result.purchaseKobo ?? 0)}) is above your food
+          package limit of {formatNaira(result.creditLimitKobo)}. You can only buy
+          up to your 1.5× salary limit. Monthly figures below use the capped
+          amount.
+        </div>
+      ) : null}
+
+      <div className="mt-8 grid gap-4 rounded-xl bg-pantri-surface-muted p-5 sm:grid-cols-2 lg:grid-cols-3">
+        <ResultItem label="Food package limit (FGV)" value={formatNaira(result.creditLimitKobo)} />
+        {purchaseNaira !== undefined ? (
+          <ResultItem
+            label="Amount in plan"
+            value={formatNaira(result.spendKobo)}
+          />
+        ) : null}
+        <ResultItem
+          label="Monthly deduction"
+          value={formatNaira(result.monthlyKobo)}
+          highlight
+        />
         <ResultItem label="Duration" value={`${result.months} months`} />
       </div>
 
       <p className="mt-4 text-xs leading-relaxed text-pantri-muted">
-        Eligibility and available limits depend on your employer and payroll arrangement.
-        Salary is shown for context only and does not guarantee approval.
+        No cash upfront  only equal monthly payroll deductions. Your limit is
+        typically 1.5× monthly salary. As deductions reduce what you owe, available
+        credit opens again so you can buy up to that limit even before a prior plan
+        is fully repaid. Eligibility depends on your employer.
       </p>
     </div>
   );
@@ -112,28 +152,38 @@ function ResultItem({
 }
 
 export function PaymentPlanVisual() {
+  const salaryKobo = nairaToKobo(DEFAULT_SALARY_NAIRA);
+  const fgvKobo = computeCreditLimitKobo(salaryKobo);
+  const monthlyKobo = Math.round(fgvKobo / 6);
+
   return (
     <div className="pantri-card flex flex-col items-center gap-3 bg-pantri-surface/90 p-6 shadow-lg backdrop-blur-sm">
       <div className="text-center">
-        <p className="text-sm font-medium text-pantri-muted">Food package</p>
-        <p className="text-2xl font-bold text-pantri-foreground">₦300,000</p>
+        <p className="text-sm font-medium text-pantri-muted">Monthly salary</p>
+        <p className="text-2xl font-bold text-pantri-foreground">
+          {formatNaira(salaryKobo)}
+        </p>
+      </div>
+      <div className="flex flex-col items-center gap-1 text-pantri-muted">
+        <span className="text-2xl">↓</span>
+        <span className="text-xs font-semibold uppercase tracking-wider">× 1.5</span>
+      </div>
+      <div className="text-center">
+        <p className="text-sm font-medium text-pantri-muted">Food package limit</p>
+        <p className="text-2xl font-bold text-pantri-foreground">
+          {formatNaira(fgvKobo)}
+        </p>
         <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-pantri-accent">
-          Today
+          Today · no upfront
         </p>
       </div>
       <div className="flex flex-col items-center gap-1 text-pantri-muted">
         <span className="text-2xl">↓</span>
       </div>
-      <div className="grid w-full grid-cols-2 gap-3">
-        <div className="rounded-xl bg-pantri-primary/10 p-4 text-center">
-          <p className="text-xs text-pantri-muted">Initial payment</p>
-          <p className="text-lg font-bold text-pantri-primary">₦60,000</p>
-        </div>
-        <div className="rounded-xl bg-pantri-accent/10 p-4 text-center">
-          <p className="text-xs text-pantri-muted">Monthly</p>
-          <p className="text-lg font-bold text-pantri-accent">₦40,000</p>
-          <p className="text-xs text-pantri-muted">× 6 months</p>
-        </div>
+      <div className="w-full rounded-xl bg-pantri-accent/10 p-4 text-center">
+        <p className="text-xs text-pantri-muted">Monthly payroll deduction</p>
+        <p className="text-lg font-bold text-pantri-accent">{formatNaira(monthlyKobo)}</p>
+        <p className="text-xs text-pantri-muted">× 6 months</p>
       </div>
     </div>
   );

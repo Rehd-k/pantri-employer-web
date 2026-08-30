@@ -144,7 +144,7 @@ export function ShopContent() {
                 />
               </div>
               <p className="mt-4 text-sm text-pantri-muted">
-                Browse here — order in the Pantri mobile app.{" "}
+                Browse here  order in the Pantri mobile app.{" "}
                 <Link href="/packages" className="font-semibold text-pantri-accent hover:underline">
                   View packages
                 </Link>

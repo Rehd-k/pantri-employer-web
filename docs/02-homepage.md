@@ -1,4 +1,4 @@
-# Spec 02 — Homepage (Reference)
+# Spec 02  Homepage (Reference)
 
 **Status:** Implemented in Phase 1.
 
@@ -31,4 +31,4 @@ Main content: [`components/marketing/HomepageContent.tsx`](../../components/mark
 
 ## When extending
 
-Do not duplicate homepage sections on other pages — link to dedicated routes instead.
+Do not duplicate homepage sections on other pages  link to dedicated routes instead.

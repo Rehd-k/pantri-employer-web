@@ -1,4 +1,4 @@
-# Spec 21 — Mobile App Download
+# Spec 21  Mobile App Download
 
 ## Route & files
 
@@ -28,8 +28,8 @@ Headline: **Everything Pantri, in your pocket.**
 
 ### Download buttons
 
-- App Store — placeholder link `#` with "Coming soon" badge
-- Google Play — placeholder link `#` with "Coming soon" badge
+- App Store  placeholder link `#` with "Coming soon" badge
+- Google Play  placeholder link `#` with "Coming soon" badge
 
 When real links exist, use env vars:
 

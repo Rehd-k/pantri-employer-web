@@ -1,4 +1,4 @@
-# Spec 08 — Recipes
+# Spec 08  Recipes
 
 ## Route & files
 
@@ -47,7 +47,7 @@ Per recipe:
 
 ## Data source
 
-Static `lib/recipes.ts` — no backend yet.
+Static `lib/recipes.ts`  no backend yet.
 
 ## States
 

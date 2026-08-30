@@ -11,7 +11,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "How does payroll deduction work?",
-    a: "After you choose a payment plan and your employer approves the arrangement, the initial payment is collected first. Remaining installments are deducted automatically through your employer's payroll process on the agreed schedule.",
+    a: "After you choose a 5- or 6-month plan and your employer approves the arrangement, equal installments are deducted automatically through your employer's payroll  no cash upfront. As deductions reduce what you owe, available credit opens again so you can buy up to your limit even before a prior plan is fully repaid.",
   },
   {
     q: "Who can use Pantri?",
@@ -23,11 +23,11 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "When do I receive my food?",
-    a: "After your order is approved and any required initial payment is confirmed, Pantri fulfils and delivers your order according to your selected delivery option.",
+    a: "After your order is approved by your employer arrangement, Pantri fulfils and delivers your order according to your selected delivery option.",
   },
   {
     q: "What payment plans are available?",
-    a: "Typical plans include 20% upfront with 6 monthly deductions, or 25% upfront with 5 monthly deductions. Actual eligibility and terms depend on your employer's credit policy.",
+    a: "Plans are typically 5 or 6 equal monthly payroll deductions with no cash upfront. Your food package limit is usually 1.5× your monthly salary  you cannot buy above that limit. Actual eligibility and terms depend on your employer's credit policy.",
   },
   {
     q: "Can I customize my package?",
@@ -43,7 +43,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "How does delivery work?",
-    a: "Fulfilment and delivery options are shown in the app when you order. Timing depends on product type, location, and your selected delivery slot after approval and initial payment.",
+    a: "Fulfilment and delivery options are shown in the app when you order. Timing depends on product type, location, and your selected delivery slot after approval.",
   },
   {
     q: "What happens if I leave my employer?",
@@ -63,7 +63,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "Is Pantri a loan?",
-    a: "No. Pantri is primarily a food purchasing platform with payroll-backed payment plans — not a personal loan product. Every purchase ties back to an authorized employer relationship.",
+    a: "No. Pantri is primarily a food purchasing platform with payroll-backed payment plans  not a personal loan product. Every purchase ties back to an authorized employer relationship.",
   },
   {
     q: "Is my financial information secure?",

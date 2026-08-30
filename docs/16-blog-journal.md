@@ -1,4 +1,4 @@
-# Spec 16 — Blog / Food & Wellness Journal
+# Spec 16  Blog / Food & Wellness Journal
 
 ## Route & files
 

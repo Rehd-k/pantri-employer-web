@@ -25,7 +25,7 @@ export function Section({
   children: ReactNode;
   id?: string;
   className?: string;
-  /** Branded navy section — same in light and dark */
+  /** Branded navy section  same in light and dark */
   dark?: boolean;
   /** Alternate surface (e.g. white band in light, elevated in dark) */
   muted?: boolean;

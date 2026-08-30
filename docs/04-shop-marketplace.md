@@ -1,4 +1,4 @@
-# Spec 04 — Shop / Food Marketplace
+# Spec 04  Shop / Food Marketplace
 
 ## Route & files
 
@@ -13,11 +13,11 @@
 
 ## Purpose
 
-Live product browsing for the public website. **No cart/checkout on web** — CTA sends users to download the app.
+Live product browsing for the public website. **No cart/checkout on web**  CTA sends users to download the app.
 
 Primary message: Browse real Pantri catalog; order via mobile app with payroll plans.
 
-## Sections — listing page
+## Sections  listing page
 
 ### Hero
 

@@ -45,7 +45,7 @@ export function SignupContent() {
                 Join Pantri in the app
               </h1>
               <p className="mt-6 text-lg text-pantri-muted">
-                Employee accounts are created in the mobile app — not on this website. Your employer
+                Employee accounts are created in the mobile app  not on this website. Your employer
                 must already be onboarded by Pantri.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">

@@ -1,8 +1,8 @@
-# Spec 22 — Shared Components Audit
+# Spec 22  Shared Components Audit
 
 ## Purpose
 
-Refinement pass after building multiple pages. Not a new page — an audit checklist.
+Refinement pass after building multiple pages. Not a new page  an audit checklist.
 
 ## Tasks
 

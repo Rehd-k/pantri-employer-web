@@ -1,4 +1,4 @@
-# Spec 13 — About Pantri
+# Spec 13  About Pantri
 
 ## Route & files
 
@@ -25,7 +25,7 @@ Farm → Procurement → Processing → Packaging → Warehouse → Pantri → Y
 
 Section headline: **From your pantry to the farm.**
 
-Label as **Our long-term vision** — do not imply facilities already exist:
+Label as **Our long-term vision**  do not imply facilities already exist:
 
 - Food processing
 - Pantri-branded products

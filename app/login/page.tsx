@@ -140,7 +140,7 @@ export default function LoginPage() {
           <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
             <h2 className="text-lg font-semibold text-slate-900">Employees use the app</h2>
             <p className="mt-2 text-sm leading-relaxed text-slate-500">
-              Shopping, payment plans, and orders happen in the Pantri mobile app — there is no
+              Shopping, payment plans, and orders happen in the Pantri mobile app  there is no
               employee login on this website.
             </p>
             <Link
@@ -162,7 +162,7 @@ export default function LoginPage() {
             <h2 className="text-lg font-semibold text-slate-900">Platform admin</h2>
             <p className="mt-2 text-sm leading-relaxed text-slate-500">
               Pantri platform administrators sign in on the admin portal. Organisation accounts are
-              created by admins — employers cannot self-register here.
+              created by admins  employers cannot self-register here.
             </p>
             <a
               href={`${ADMIN_URL}/login`}

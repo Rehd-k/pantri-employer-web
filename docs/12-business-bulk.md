@@ -1,4 +1,4 @@
-# Spec 12 — Business / Corporate Bulk Food
+# Spec 12  Business / Corporate Bulk Food
 
 ## Route & files
 

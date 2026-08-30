@@ -14,11 +14,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Pantri — Get the food you need today. Pay from your salary.",
+    default: "Pantri  A full table today. Room in your paycheck for tomorrow.",
     template: "%s | Pantri",
   },
   description:
-    "Pantri helps employees buy groceries, family food packages and event supplies today, while convenient payroll deductions spread the cost over time.",
+    "Pantri helps you stock food now with payroll deductionsso you can eat well, cover bills, and invest. Buy in bulk before the next jump (in Nigeria, prices only go up), and your pantry stays full.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

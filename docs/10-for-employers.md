@@ -1,4 +1,4 @@
-# Spec 10 — For Employers
+# Spec 10  For Employers
 
 ## Route & files
 
@@ -13,7 +13,7 @@ Headline: **A better food benefit for your employees.**
 
 ## Sections
 
-### Hero (distinct visual tone — more enterprise)
+### Hero (distinct visual tone  more enterprise)
 
 - Darker background or navy section
 - Headline + subtext
@@ -21,11 +21,11 @@ Headline: **A better food benefit for your employees.**
 
 ### Value propositions (grid)
 
-1. Employee welfare — manage food expenses
-2. Easy payroll administration — structured deductions
-3. No inventory for employer — Pantri handles fulfilment
-4. Employee retention — practical benefit
-5. Reporting — monitor participation and deductions
+1. Employee welfare  manage food expenses
+2. Easy payroll administration  structured deductions
+3. No inventory for employer  Pantri handles fulfilment
+4. Employee retention  practical benefit
+5. Reporting  monitor participation and deductions
 
 ### Employer dashboard preview
 

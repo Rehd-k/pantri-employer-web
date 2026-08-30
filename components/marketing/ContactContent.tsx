@@ -28,7 +28,7 @@ export function ContactContent() {
                 Get in touch
               </h1>
               <p className="mt-6 text-lg text-pantri-muted">
-                Employer onboarding, payroll questions, or general support — send a message and our
+                Employer onboarding, payroll questions, or general support  send a message and our
                 team will respond within one business day.
               </p>
             </div>
@@ -89,7 +89,7 @@ export function ContactContent() {
                 ))}
               </ul>
               <p className="mt-6 text-sm text-pantri-muted">
-                New employer? Organisations are onboarded by Pantri —{" "}
+                New employer? Organisations are onboarded by Pantri {" "}
                 <Link
                   href="/contact?topic=Employer%20enquiry"
                   className="font-semibold text-pantri-accent hover:underline"

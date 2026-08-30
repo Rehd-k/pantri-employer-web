@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PackageDetail } from "@/components/marketing/packages/PackageDetail";
 
 export const metadata: Metadata = {
-  title: "Package — Pantri",
+  title: "Package  Pantri",
   description: "View package contents, pricing, and payroll payment examples on Pantri.",
 };
 

@@ -72,10 +72,10 @@ export function ContactForm({ defaultTopic }: { defaultTopic?: string } = {}) {
   if (success) {
     return (
       <div className="pantri-card p-8 text-center sm:p-10">
-        <p className="text-lg font-bold text-pantri-foreground">Thank you — message received</p>
+        <p className="text-lg font-bold text-pantri-foreground">Thank you  message received</p>
         <p className="mt-3 text-sm leading-relaxed text-pantri-muted">
           We&apos;ll be back to you within 1 business day. For employer onboarding, our team will
-          guide your organisation through setup — companies are not self-registered on the website.
+          guide your organisation through setup  companies are not self-registered on the website.
         </p>
         <button
           type="button"

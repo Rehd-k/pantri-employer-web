@@ -14,9 +14,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const recipe = getRecipeBySlug(slug);
-  if (!recipe) return { title: "Recipe — Pantri" };
+  if (!recipe) return { title: "Recipe  Pantri" };
   return {
-    title: `${recipe.title} — Pantri Recipes`,
+    title: `${recipe.title}  Pantri Recipes`,
     description: recipe.summary,
   };
 }
