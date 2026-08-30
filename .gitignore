@@ -19,6 +19,10 @@ yarn-error.log*
 
 # local env files
 .env*.local
+pnpm-workspace.yaml
+.pnpm-workspace.yaml
+/pnpm-workspace.yaml
+
 
 # typescript
 *.tsbuildinfo
