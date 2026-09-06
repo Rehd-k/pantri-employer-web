@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 import { api, ApiError } from "@/lib/api";
+import { EmployerEvents, trackPage } from "@/lib/analytics";
 import type { CreditPolicy, UpdateCreditPolicyInput } from "@/lib/types";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
 import { Field, Input, Select } from "@/components/ui/Input";
@@ -19,6 +20,7 @@ export default function PolicyPage() {
   const [success, setSuccess] = useState<string | null>(null);
 
   useEffect(() => {
+    trackPage(EmployerEvents.POLICY_VIEWED);
     let cancelled = false;
     async function load() {
       setLoading(true);

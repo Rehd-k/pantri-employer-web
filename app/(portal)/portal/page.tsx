@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { api, ApiError } from "@/lib/api";
+import { EmployerEvents, trackPage } from "@/lib/analytics";
 import { formatNaira } from "@/lib/format";
 import { useAuth } from "@/lib/auth";
 import type { EmployerBalanceSummary, EmployerExposureBreakdown } from "@/lib/types";
@@ -18,6 +19,10 @@ export default function DashboardPage() {
   const [exposure, setExposure] = useState<EmployerExposureBreakdown | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    trackPage(EmployerEvents.DASHBOARD_VIEWED);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;

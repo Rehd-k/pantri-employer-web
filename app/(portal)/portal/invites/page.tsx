@@ -8,6 +8,7 @@ import { ErrorBanner, Spinner, SuccessBanner } from "@/components/ui/Feedback";
 import { Field, Input } from "@/components/ui/Input";
 import { DataTable, type Column } from "@/components/ui/Table";
 import { api, ApiError } from "@/lib/api";
+import { EmployerEvents, track, trackPage } from "@/lib/analytics";
 import { useAuth } from "@/lib/auth";
 import { formatDateTime } from "@/lib/format";
 import type { EmployeeInvite } from "@/lib/types";
@@ -33,7 +34,11 @@ export default function InvitesPage() {
       setLoading(false);
     }
   }
-  useEffect(() => { void load(); }, []);
+
+  useEffect(() => {
+    trackPage(EmployerEvents.EMPLOYEE_LIST_VIEWED, { page: "invites" });
+    void load();
+  }, []);
 
   async function create(event: FormEvent) {
     event.preventDefault();
@@ -45,6 +50,7 @@ export default function InvitesPage() {
         phone: phone || undefined,
         expiresInDays: Number(expiresInDays),
       });
+      track(EmployerEvents.EMPLOYEE_INVITED, { metadata: { email } });
       setEmail("");
       setPhone("");
       setSuccess("Personal invite created.");

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { api, ApiError } from "@/lib/api";
+import { EmployerEvents, trackPage } from "@/lib/analytics";
 import type { EmployerEmployee } from "@/lib/types";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
 import { DataTable, type Column } from "@/components/ui/Table";
@@ -32,6 +33,7 @@ export default function EmployeesPage() {
   }
 
   useEffect(() => {
+    trackPage(EmployerEvents.EMPLOYEE_LIST_VIEWED);
     loadEmployees();
   }, []);
 

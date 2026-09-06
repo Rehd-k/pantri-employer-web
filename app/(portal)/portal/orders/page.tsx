@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { api, ApiError } from "@/lib/api";
+import { EmployerEvents, track, trackPage } from "@/lib/analytics";
 import type { EmployerEmployee, EmployerOrder, OrderFulfillmentStatus } from "@/lib/types";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
 import { DataTable, type Column } from "@/components/ui/Table";
@@ -79,6 +80,7 @@ export default function OrdersPage() {
   }
 
   useEffect(() => {
+    trackPage(EmployerEvents.ORDERS_VIEWED);
     loadOrders(status);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status]);
@@ -94,6 +96,11 @@ export default function OrdersPage() {
     };
     try {
       await api.post(`/employer/orders/${id}/${action}`);
+      if (action === "approve") {
+        track(EmployerEvents.ORDER_APPROVED, { entityType: "order", entityId: id });
+      } else if (action === "reject") {
+        track(EmployerEvents.ORDER_REJECTED, { entityType: "order", entityId: id });
+      }
       setSuccess(`Order ${labels[action]}.`);
       await loadOrders(status);
     } catch (err) {

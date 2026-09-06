@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 import Link from "next/link";
 import { api, ApiError } from "@/lib/api";
+import { EmployerEvents, track, trackPage } from "@/lib/analytics";
 import type { PayrollRun } from "@/lib/types";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
 import { DataTable, type Column } from "@/components/ui/Table";
@@ -42,6 +43,7 @@ export default function PayrollPage() {
   }
 
   useEffect(() => {
+    trackPage(EmployerEvents.PAYROLL_VIEWED);
     loadRuns();
   }, []);
 
@@ -56,6 +58,7 @@ export default function PayrollPage() {
         periodEnd: new Date(form.periodEnd).toISOString(),
         payrollDate: new Date(form.payrollDate).toISOString(),
       });
+      track(EmployerEvents.PAYROLL_SUBMITTED);
       setSuccess("Payroll run generated.");
       await loadRuns();
     } catch (err) {

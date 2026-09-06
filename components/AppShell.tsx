@@ -9,6 +9,7 @@ import { Spinner } from "@/components/ui/Feedback";
 
 const NAV_ITEMS = [
   { href: "/portal", label: "Dashboard" },
+  { href: "/portal/insights", label: "Insights" },
   { href: "/portal/policy", label: "Credit Policy" },
   { href: "/portal/payroll", label: "Payroll Runs" },
   { href: "/portal/orders", label: "Order Approvals" },
