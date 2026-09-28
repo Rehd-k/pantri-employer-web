@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "./BrandLogo";
 import { Container } from "./primitives";
 
 const FOOTER_COLUMNS = [
@@ -59,11 +60,8 @@ export function MarketingFooter() {
       <Container className="py-16">
         <div className="mb-12 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-sm">
-            <div className="mb-4 flex items-center gap-2.5">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-pantri-accent text-sm font-bold">
-                P
-              </div>
-              <span className="text-xl font-bold">Pantri</span>
+            <div className="mb-4">
+              <BrandLogo variant="lockup" tone="white" height={36} />
             </div>
             <p className="text-sm leading-relaxed text-white/70">
               Better food. Smarter living.

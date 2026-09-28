@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import type { ReactNode } from "react";
 import { useAuth } from "@/lib/auth";
+import { BrandLogo } from "@/components/marketing/BrandLogo";
 import { Spinner } from "@/components/ui/Feedback";
 
 const NAV_ITEMS = [
@@ -49,14 +50,9 @@ export function AppShell({ children }: { children: ReactNode }) {
     <div className="min-h-screen bg-slate-50">
       <div className="flex min-h-screen">
         <aside className="hidden w-64 shrink-0 flex-col border-r border-slate-200 bg-white px-4 py-6 md:flex">
-          <div className="mb-8 flex items-center gap-2 px-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600 text-sm font-bold text-white">
-              P
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-slate-900">Pantri</p>
-              <p className="text-xs text-slate-400">Employer Portal</p>
-            </div>
+          <div className="mb-8 px-2">
+            <BrandLogo variant="lockup" tone="color" height={28} />
+            <p className="mt-1.5 text-xs text-slate-400">Employer Portal</p>
           </div>
           <nav className="flex flex-1 flex-col gap-1">
             {NAV_ITEMS.map((item) => {
@@ -92,11 +88,9 @@ export function AppShell({ children }: { children: ReactNode }) {
 
         <div className="flex flex-1 flex-col">
           <header className="flex items-center justify-between border-b border-slate-200 bg-white px-4 py-3 md:hidden">
-            <div className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-600 text-xs font-bold text-white">
-                P
-              </div>
-              <span className="text-sm font-semibold text-slate-900">Pantri Employer</span>
+            <div className="flex min-w-0 items-center gap-2">
+              <BrandLogo variant="mark" tone="color" height={28} />
+              <span className="truncate text-sm font-semibold text-slate-900">Employer</span>
             </div>
             <button onClick={logout} className="text-sm font-medium text-slate-500">
               Sign out

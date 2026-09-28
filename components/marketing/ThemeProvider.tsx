@@ -74,6 +74,11 @@ export function useTheme(): ThemeContextValue {
   return ctx;
 }
 
+/** Safe for components that may render outside ThemeProvider (e.g. portal). */
+export function useThemeOptional(): ThemeContextValue | undefined {
+  return useContext(ThemeContext);
+}
+
 /** Avoid hydration mismatch for theme-dependent UI */
 export function useThemeMounted(): boolean {
   const [mounted, setMounted] = useState(false);

@@ -8,6 +8,7 @@ import {
   PackageCardFromApi,
   TestimonialCard,
 } from "./Cards";
+import { BrandLogo } from "./BrandLogo";
 import { FaqAccordion } from "./FaqAccordion";
 import { PaymentCalculator, PaymentPlanVisual } from "./PaymentCalculator";
 import { Container, CTAButton, Section, SectionHeading, TrustBadge } from "./primitives";
@@ -410,10 +411,8 @@ export function HomepageContent() {
           </ScrollReveal>
           <ScrollReveal>
             <div className="mx-auto flex h-80 w-48 items-center justify-center rounded-[2.5rem] border-4 border-pantri-charcoal bg-pantri-primary/5 shadow-2xl">
-              <div className="text-center">
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-pantri-accent text-white font-bold">
-                  P
-                </div>
+              <div className="flex flex-col items-center text-center">
+                <BrandLogo variant="mark" tone="color" height={48} className="mb-4" />
                 <p className="text-sm font-semibold text-pantri-charcoal">Pantri App</p>
                 <p className="mt-1 text-xs text-pantri-muted">Marketplace · Packages · Nutrition</p>
               </div>

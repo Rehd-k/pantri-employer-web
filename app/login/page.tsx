@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth";
 import { authErrorMessage } from "@/lib/api";
+import { BrandLogo } from "@/components/marketing/BrandLogo";
 import { Button } from "@/components/ui/Button";
 import { Field, Input } from "@/components/ui/Input";
 import { ErrorBanner, Spinner } from "@/components/ui/Feedback";
@@ -54,14 +55,11 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4 py-12">
       <div className="w-full max-w-md">
-        <div className="mb-8 flex flex-col items-center gap-2 text-center">
-          <Link
-            href="/"
-            className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-600 text-lg font-bold text-white"
-          >
-            P
+        <div className="mb-8 flex flex-col items-center gap-3 text-center">
+          <Link href="/" className="inline-flex">
+            <BrandLogo variant="lockup" tone="color" height={40} priority />
           </Link>
-          <h1 className="text-xl font-semibold text-slate-900">Sign in to Pantri</h1>
+          <h1 className="text-xl font-semibold text-slate-900">Sign in</h1>
           <p className="text-sm text-slate-500">Choose how you use Pantri</p>
         </div>
 

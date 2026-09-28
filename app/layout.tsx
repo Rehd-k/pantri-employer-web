@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   },
   description:
     "Pantri helps you stock food now with payroll deductionsso you can eat well, cover bills, and invest. Buy in bulk before the next jump (in Nigeria, prices only go up), and your pantry stays full.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/colored_logo.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

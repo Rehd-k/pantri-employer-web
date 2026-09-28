@@ -1,6 +1,7 @@
 "use client";
 
 import { Container, CTAButton, Section, SectionHeading, TrustBadge } from "./primitives";
+import { BrandLogo } from "./BrandLogo";
 import { ScrollReveal } from "./ScrollReveal";
 
 const FEATURES = [
@@ -70,7 +71,10 @@ export function DownloadContent() {
                       ))}
                     </div>
                     <div className="space-y-3 p-5">
-                      <p className="text-sm font-bold text-pantri-foreground">Good afternoon</p>
+                      <div className="flex items-center justify-between gap-2">
+                        <BrandLogo variant="lockup" height={22} />
+                        <p className="text-xs text-pantri-muted">Good afternoon</p>
+                      </div>
                       <div className="rounded-xl bg-pantri-accent/15 p-4">
                         <p className="text-xs text-pantri-muted">Active plan</p>
                         <p className="mt-1 text-sm font-semibold text-pantri-foreground">

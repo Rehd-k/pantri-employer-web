@@ -1,6 +1,7 @@
 export { MarketingShell } from "./MarketingShell";
 export { MarketingNav } from "./MarketingNav";
 export { MarketingFooter } from "./MarketingFooter";
+export { BrandLogo } from "./BrandLogo";
 export {
   Section,
   SectionHeading,

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { BrandLogo } from "./BrandLogo";
 import { ThemeToggle } from "./ThemeToggle";
 import { Container, CTAButton } from "./primitives";
 
@@ -32,11 +33,8 @@ export function MarketingNav() {
     <header className="sticky top-0 z-50 border-b border-pantri-border/60 bg-pantri-background/90 backdrop-blur-md">
       <Container>
         <div className="flex h-16 items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2.5" onClick={close}>
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-pantri-primary text-sm font-bold text-white">
-              P
-            </div>
-            <span className="text-lg font-bold tracking-tight text-pantri-foreground">Pantri</span>
+          <Link href="/" className="flex items-center" onClick={close}>
+            <BrandLogo variant="lockup" height={30} priority className="max-w-[140px] sm:max-w-none" />
           </Link>
 
           <nav className="hidden items-center gap-1 lg:flex">
