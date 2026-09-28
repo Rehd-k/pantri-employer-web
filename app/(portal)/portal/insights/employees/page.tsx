@@ -36,12 +36,10 @@ export default function InsightsEmployeesPage() {
 
   const columns: Column<Row>[] = [
     {
-      key: "employeeId",
       header: "Employee ID",
       accessor: (r) => r.employeeId ?? "—",
     },
     {
-      key: "lastActiveAt",
       header: "Last active",
       accessor: (r) =>
         r.lastActiveAt ? new Date(r.lastActiveAt).toLocaleString() : "—",
