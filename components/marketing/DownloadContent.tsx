@@ -18,7 +18,7 @@ const SCREENS = ["Home", "Marketplace", "Packages", "Nutrition", "Orders"];
 const iosUrl = process.env.NEXT_PUBLIC_IOS_APP_URL || "";
 const androidUrl = process.env.NEXT_PUBLIC_ANDROID_APP_URL || "";
 
-export function DownloadContent() {
+export function DownloadContent({ notice }: { notice?: string }) {
   const iosReady = Boolean(iosUrl && iosUrl !== "#");
   const androidReady = Boolean(androidUrl && androidUrl !== "#");
 
@@ -38,6 +38,11 @@ export function DownloadContent() {
                 Browse on the web, then order, track delivery, and manage payment plans in the Pantri
                 app  for employees of participating employers.
               </p>
+              {notice ? (
+                <p className="mt-4 rounded-xl bg-pantri-accent/10 px-4 py-3 text-base text-pantri-foreground">
+                  {notice}
+                </p>
+              ) : null}
               <div className="mt-8 flex flex-wrap gap-4">
                 <StoreButton
                   label="App Store"

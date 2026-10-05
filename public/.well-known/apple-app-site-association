@@ -1,0 +1,51 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["REPLACE_WITH_APPLE_TEAM_ID.com.example.pantri"],
+        "components": [
+          {
+            "/": "/app/food/*",
+            "comment": "Food details"
+          },
+          {
+            "/": "/app/order/*",
+            "comment": "Order details"
+          },
+          {
+            "/": "/app/orders",
+            "comment": "Orders list"
+          },
+          {
+            "/": "/app/packages",
+            "comment": "Packages list"
+          },
+          {
+            "/": "/app/packages/*",
+            "comment": "Package details"
+          },
+          {
+            "/": "/app/marketplace",
+            "comment": "Marketplace tab"
+          },
+          {
+            "/": "/app/credit",
+            "comment": "Credit tab"
+          },
+          {
+            "/": "/app/profile",
+            "comment": "Profile tab"
+          },
+          {
+            "/": "/app/invite/*",
+            "comment": "Employee invite"
+          },
+          {
+            "/": "/app/promo/*",
+            "comment": "Promo code"
+          }
+        ]
+      }
+    ]
+  }
+}
